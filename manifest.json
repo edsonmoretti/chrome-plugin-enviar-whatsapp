@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "WA Send",
+  "description": "Envie mensagens automaticamente para números do WhatsApp através de API compatível.",
+  "version": "0.1",
+  "icons": {
+    "128": "128.png"
+  },
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "permissions": ["storage"],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
